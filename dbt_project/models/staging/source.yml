@@ -1,0 +1,15 @@
+# models/staging/sources.yml
+version: 2
+
+sources:
+  - name: RAW     
+    description: "Raw tables loaded into Snowflake"
+    database: ELT_PIPELINE   
+    schema: RAW         
+    tables:
+      - name: RAW_ORDERS
+        description: "Raw orders table from source system"
+      - name: RAW_CUSTOMERS
+        description: "Raw customers table from source system"
+      - name: RAW_ORDER_ITEMS
+        description: "Raw order items table from source system"

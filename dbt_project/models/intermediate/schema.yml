@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table with aggregated orders and revenue"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('customers_stg')
+                field: customer_id
+      - name: revenue
+        description: "Total revenue per order"
+      - name: total_order_count
+        description: "Total count of orders per order_id"

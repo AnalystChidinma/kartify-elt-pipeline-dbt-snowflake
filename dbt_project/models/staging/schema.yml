@@ -1,0 +1,47 @@
+
+version: 2
+
+models:
+  - name: stg_customers
+    description: "A staging model for customers data"
+    columns:
+      - name: customer_id
+        description: "The primary key for this table"
+        tests:
+          - not_null
+  - name: stg_order_items
+    description: "A staging model for order items data"
+    columns:
+      - name: order_item_id
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: order_id
+        description: "The foreign key to the orders table"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+  - name: stg_orders
+    description: "A staging model for orders data"
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: customer_id
+        description: "The foreign key to the customers table"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: created_at
+        description: "The timestamp when the order was created"
+        tests:
+          - not_null
+
+
