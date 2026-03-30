@@ -14,9 +14,9 @@ SELECT
     sum(f.revenue) as total_revenue,
     sum(f.total_order_count) as total_orders
 FROM 
-    {{ ref('fct_orders') }} f
+    fct_orders f
 LEFT JOIN 
-    {{ ref('stg_customers') }} c ON f.Customer_id = c.Customer_id
+    stg_customers c ON f.Customer_id = c.Customer_id
 GROUP BY
     f.Customer_id,
     c.customer_name

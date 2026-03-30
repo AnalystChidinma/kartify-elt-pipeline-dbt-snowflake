@@ -22,11 +22,11 @@ SELECT
     count(Distinct o.Order_id) as total_order_count,
     sum(oi.Total_price) as Revenue
 FROM 
-    {{ ref('stg_orders') }} o
+    orders o
 LEFT JOIN 
-    {{ ref('stg_customers') }} c ON o.Customer_id = c.Customer_id
+    customers c ON o.Customer_id = c.Customer_id
 LEFT JOIN 
-    {{ ref('stg_order_items') }} oi ON o.Order_id = oi.Order_id
+    order_items oi ON o.Order_id = oi.Order_id
 GROUP BY
     o.order_id,
     o.Customer_id,
