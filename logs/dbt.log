@@ -71,3 +71,18 @@ Runtime Error
 [0m18:16:37.446400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E626A8860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E656B74D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E6555A990>]}
 [0m18:16:37.447399 [debug] [MainThread]: Flushing usage events
 [0m18:16:42.158179 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:03:40.130710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001986B5C03E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001986C3558E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001986BA2C290>]}
+
+
+============================== 02:03:40.140772 | 43df21cc-246c-4ef6-ad97-034bc3f34ee2 ==============================
+[0m02:03:40.140772 [info ] [MainThread]: Running with dbt=1.11.7
+[0m02:03:40.142713 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\DELL\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m02:03:40.143715 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\DELL\Documents\ETL_Pandas_project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m02:03:40.145714 [debug] [MainThread]: Command `dbt run` failed at 02:03:40.144712 after 0.24 seconds
+[0m02:03:40.146714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001986BD91580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001986C0407A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001986B979DF0>]}
+[0m02:03:40.147711 [debug] [MainThread]: Flushing usage events
+[0m02:03:41.909951 [debug] [MainThread]: An error was encountered while trying to flush usage events
