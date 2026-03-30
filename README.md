@@ -41,7 +41,7 @@ The dbt project follows a layered architecture:
 2. ```intermediate/``` → Transformation logic applied
 3. ```mart/``` → Business-level models for reporting
    
-Example Mart Model: Customer Revenue
+**Example Mart Model: Customer Revenue**
 
 This model aggregates transactional data to provide insights into customer value:
 
